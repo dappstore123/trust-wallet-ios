@@ -13,9 +13,9 @@ class TokenImageGenerator {
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .center
             let attrs = [
-                NSAttributedStringKey.font: UIFont.systemFont(ofSize: labelFont, weight: .medium),
-                NSAttributedStringKey.foregroundColor: UIColor(hex: "ABABAB"),
-                NSAttributedStringKey.paragraphStyle: paragraphStyle,
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: labelFont, weight: .medium),
+                NSAttributedString.Key.foregroundColor: UIColor(hex: "ABABAB"),
+                NSAttributedString.Key.paragraphStyle: paragraphStyle,
             ]
             let y = size/2 - labelFont - 2
             let string = title

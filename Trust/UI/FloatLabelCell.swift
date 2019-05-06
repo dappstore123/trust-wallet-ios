@@ -9,12 +9,16 @@ public class _FloatLabelCell<T>: Cell<T>, UITextFieldDelegate, TextFieldCell whe
 
     public var textField: UITextField! { return floatLabelTextField }
 
-    required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    required init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        fatalError("init(style:reuseIdentifier:) has not been implemented")
     }
 
     lazy public var floatLabelTextField: FloatLabelTextField = { [unowned self] in
@@ -143,7 +147,7 @@ public class _FloatLabelCell<T>: Cell<T>, UITextFieldDelegate, TextFieldCell whe
 
 public class TextFloatLabelCell: _FloatLabelCell<String>, CellType {
 
-    required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
@@ -161,7 +165,7 @@ public class TextFloatLabelCell: _FloatLabelCell<String>, CellType {
 
 public class IntFloatLabelCell: _FloatLabelCell<Int>, CellType {
 
-    required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
@@ -179,7 +183,7 @@ public class IntFloatLabelCell: _FloatLabelCell<Int>, CellType {
 
 public class PhoneFloatLabelCell: _FloatLabelCell<String>, CellType {
 
-    required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
@@ -195,7 +199,7 @@ public class PhoneFloatLabelCell: _FloatLabelCell<String>, CellType {
 
 public class NameFloatLabelCell: _FloatLabelCell<String>, CellType {
 
-    required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
@@ -213,7 +217,7 @@ public class NameFloatLabelCell: _FloatLabelCell<String>, CellType {
 
 public class EmailFloatLabelCell: _FloatLabelCell<String>, CellType {
 
-    required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
@@ -231,7 +235,7 @@ public class EmailFloatLabelCell: _FloatLabelCell<String>, CellType {
 
 public class PasswordFloatLabelCell: _FloatLabelCell<String>, CellType {
 
-    required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
@@ -250,7 +254,7 @@ public class PasswordFloatLabelCell: _FloatLabelCell<String>, CellType {
 
 public class DecimalFloatLabelCell: _FloatLabelCell<Float>, CellType {
 
-    required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
@@ -266,7 +270,7 @@ public class DecimalFloatLabelCell: _FloatLabelCell<Float>, CellType {
 
 public class URLFloatLabelCell: _FloatLabelCell<URL>, CellType {
 
-    required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
@@ -282,7 +286,7 @@ public class URLFloatLabelCell: _FloatLabelCell<URL>, CellType {
 
 public class TwitterFloatLabelCell: _FloatLabelCell<String>, CellType {
 
-    required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
@@ -300,7 +304,7 @@ public class TwitterFloatLabelCell: _FloatLabelCell<String>, CellType {
 
 public class AccountFloatLabelCell: _FloatLabelCell<String>, CellType {
 
-    required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
@@ -380,12 +384,16 @@ public final class ImageCheckRow<T: Equatable>: Row<ImageCheckCell<T>>, Selectab
 
 public class ImageCheckCell<T: Equatable> : Cell<T>, CellType {
 
-    required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    required init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        fatalError("init(style:reuseIdentifier:) has not been implemented")
     }
 
     /// Image for selected state
