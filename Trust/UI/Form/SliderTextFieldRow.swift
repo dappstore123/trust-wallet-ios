@@ -52,10 +52,6 @@ open class SliderTextFieldCell: Cell<Float>, CellType, UITextFieldDelegate {
         awakeFromNibCalled = true
     }
 
-    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        fatalError("init(style:reuseIdentifier:) has not been implemented")
-    }
-
     open override func setup() {
         super.setup()
         if !awakeFromNibCalled {

@@ -9,18 +9,15 @@ public class _FloatLabelCell<T>: Cell<T>, UITextFieldDelegate, TextFieldCell whe
 
     public var textField: UITextField! { return floatLabelTextField }
 
-    required public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     required init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         fatalError("init(style:reuseIdentifier:) has not been implemented")
     }
-
+    
     lazy public var floatLabelTextField: FloatLabelTextField = { [unowned self] in
         let floatTextField = FloatLabelTextField()
         floatTextField.translatesAutoresizingMaskIntoConstraints = false
@@ -391,11 +388,7 @@ public class ImageCheckCell<T: Equatable> : Cell<T>, CellType {
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    required init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        fatalError("init(style:reuseIdentifier:) has not been implemented")
-    }
-
+    
     /// Image for selected state
     lazy public var trueImage: UIImage = {
         return UIImage(named: "selected")!
